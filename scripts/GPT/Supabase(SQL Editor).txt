@@ -1,0 +1,5 @@
+-- ล้างข้อมูลเดิมออกก่อน (เนื่องจากขนาด vector มิติไม่เท่ากัน)
+TRUNCATE TABLE clinic_embeddings;
+
+-- ปรับขนาด vector เป็น 1536 มิติ
+ALTER TABLE clinic_embeddings ALTER COLUMN embedding TYPE vector(1536);
